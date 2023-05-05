@@ -7,9 +7,12 @@ function App() {
   const [accounts, setAccounts] = useState([]); // account address
 
   return (
-    <div className="App">
-      <NavBar account={accounts} setAccount={setAccounts} />
-      <MainMint account={accounts} setAccount={setAccounts} />
+    <div className="overlay">
+      <div className="App">
+        <NavBar accounts={accounts} setAccounts={setAccounts} />
+        <MainMint accounts={accounts} setAccounts={setAccounts} />
+      </div>
+      <div className="moving-background"></div>
     </div>
   );
 }
